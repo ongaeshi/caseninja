@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ongaeshi0621@gmail.com"]
   spec.summary       = %q{Convert input text to chain, snake, camel and pascal case.}
   spec.description   = %q{Caseninja converts input text to chain, snake, camel and pascal case. It will freely convert any text to any case.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ongaeshi/caseninja"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
