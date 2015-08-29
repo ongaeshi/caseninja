@@ -32,6 +32,14 @@ class TestCaseninja < MiniTest::Test
   end
 
   def test_normlize
+    assert_equal "hello world", Caseninja.normalize("hello world")
     assert_equal "hello world", Caseninja.normalize("Hello world")
+    assert_equal "hello world", Caseninja.normalize("hello-world")
+    assert_equal "hello world", Caseninja.normalize("hello_world")
+    assert_equal "hello world", Caseninja.normalize("helloWorld")
+    assert_equal "hello world", Caseninja.normalize("HelloWorld")
+    assert_equal "hello world", Caseninja.normalize("HELLO-WORLD")
+    assert_equal "hello world", Caseninja.normalize("HELLO_WORLD")
+    assert_equal "hello world", Caseninja.normalize("HELLO_world")
   end
 end

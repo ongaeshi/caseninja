@@ -39,7 +39,15 @@ module Caseninja
   end
 
   def normalize(text)
-    text.downcase
+    if text =~ / /
+      text.downcase
+    elsif text =~ /-/
+      text.gsub("-", " ").downcase
+    elsif text =~ /_/
+      text.gsub("_", " ").downcase
+    else
+      text.split(/(?=[A-Z])/).join(" ").downcase
+    end
   end
   
 end
