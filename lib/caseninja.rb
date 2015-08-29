@@ -7,8 +7,8 @@ module Caseninja
     {
       chain: to_chain(text),
       snake: to_snake(text),
-      camel: "helloWorld",
-      pascal: "HelloWorld",
+      camel: to_camel(text),
+      pascal: to_pascal(text),
       upper_chain: "HELLO-WORLD",
       upper_snake: "HELLO_WORLD",
     }
@@ -20,5 +20,13 @@ module Caseninja
 
   def to_snake(text)
     text.gsub(" ", "_")
+  end
+
+  def to_camel(text)
+    to_pascal(text).sub(/./) { $&.downcase }
+  end
+
+  def to_pascal(text)
+    text.split.map { |e| e.capitalize }.join
   end
 end
