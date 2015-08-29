@@ -21,7 +21,7 @@ Usage: caseninja [options] args
         --upsnake                    Convert to upper snake case
 ```
 
-入力されたテキストをチェイン、スネーク、キャメル、パスカル、大文字チェイン、スネークケースにまとめて変換します。
+Convert the entered text to the chain, snake, camel, pascal, uppercase chain and uppercase snake.
 
 ```
 $ caseninja "hello world"
@@ -33,7 +33,7 @@ HELLO-WORLD    # upchain
 HELLO_WORLD    # upsnake
 ```
 
-入力にはどのケースを入れても構いません。
+You can enter all the case.
 
 ```
 $ caseninja fooBarToBaz
@@ -43,23 +43,32 @@ fooBarToBaz
 FooBarToBaz
 FOO-BAR-TO-BAZ
 FOO_BAR_TO_BAZ
+
+$ caseninja foo-bar-to-baz
+foo-bar-to-baz
+foo_bar_to_baz
+fooBarToBaz
+FooBarToBaz
+FOO-BAR-TO-BAZ
+FOO_BAR_TO_BAZ
 ```
 
-スネークケースに変換します。
+Convert to snake case.
 
 ```
 $ caseninja fooBarToBaz --snake
 foo_bar_to_baz
 ```
 
-スネークケースに変換します。
+Convert to snake and pascal case.
 
 ```
-$ caseninja fooBarToBaz --snake
+$ caseninja fooBarToBaz -s -p
 foo_bar_to_baz
+FooBarToBaz
 ```
 
-長文も簡単に変換できます。
+You can also pass the sentence.
 
 ```
 $ caseninja "What does the Japanese word Dattebayo mean?"
