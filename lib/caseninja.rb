@@ -15,11 +15,11 @@ module Caseninja
   end
 
   def to_chain(text)
-    text.gsub(" ", "-")
+    normalize(text).gsub(" ", "-")
   end
 
   def to_snake(text)
-    text.gsub(" ", "_")
+    normalize(text).gsub(" ", "_")
   end
 
   def to_camel(text)
@@ -27,7 +27,7 @@ module Caseninja
   end
 
   def to_pascal(text)
-    text.split.map { |e| e.capitalize }.join
+    normalize(text).split.map { |e| e.capitalize }.join
   end
 
   def to_upchain(text)
@@ -36,6 +36,10 @@ module Caseninja
   
   def to_upsnake(text)
     to_snake(text).upcase
+  end
+
+  def normalize(text)
+    text.downcase
   end
   
 end

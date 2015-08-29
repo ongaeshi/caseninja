@@ -27,8 +27,11 @@ class TestCaseninja < MiniTest::Test
         upchain: "CASENINJA-CONVERTS-INPUT-TEXT-TO-CHAIN-CASE",
         upsnake: "CASENINJA_CONVERTS_INPUT_TEXT_TO_CHAIN_CASE",
       },
-      # Caseninja.exec("Caseninja converts input text to chain case")
-      Caseninja.exec("caseninja converts input text to chain case")
+      Caseninja.exec("Caseninja converts input text to chain case")
     )
+  end
+
+  def test_normlize
+    assert_equal "hello world", Caseninja.normalize("Hello world")
   end
 end
