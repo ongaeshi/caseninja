@@ -25,7 +25,7 @@ if ARGV.count == 0
 else
   ARGV.each do |text| 
     if opts.empty?
-      puts Caseninja.exec(text).values
+      puts Caseninja.to_hash(text).values
     else
       puts Caseninja.to_chain(text) if opts[:chain]
       puts Caseninja.to_snake(text) if opts[:snake]

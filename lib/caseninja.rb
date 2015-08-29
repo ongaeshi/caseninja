@@ -3,7 +3,7 @@ require "caseninja/version"
 module Caseninja
   module_function
 
-  def exec(text, options = {})
+  def to_hash(text)
     {
       chain: to_chain(text),
       snake: to_snake(text),

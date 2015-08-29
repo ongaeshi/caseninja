@@ -5,7 +5,7 @@ class TestCaseninja < MiniTest::Test
     refute_nil ::Caseninja::VERSION
   end
 
-  def test_exec
+  def test_to_hash
     assert_equal(
       {
         chain: "hello-world",
@@ -15,7 +15,7 @@ class TestCaseninja < MiniTest::Test
         upchain: "HELLO-WORLD",
         upsnake: "HELLO_WORLD",
       },
-      Caseninja.exec("hello world")
+      Caseninja.to_hash("hello world")
     )
 
     assert_equal(
@@ -27,7 +27,7 @@ class TestCaseninja < MiniTest::Test
         upchain: "CASENINJA-CONVERTS-INPUT-TEXT-TO-CHAIN-CASE",
         upsnake: "CASENINJA_CONVERTS_INPUT_TEXT_TO_CHAIN_CASE",
       },
-      Caseninja.exec("Caseninja converts input text to chain case")
+      Caseninja.to_hash("Caseninja converts input text to chain case")
     )
   end
 
