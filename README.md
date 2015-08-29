@@ -33,7 +33,7 @@ HELLO-WORLD                                  # upchain
 HELLO_WORLD                                  # upsnake
 ```
 
-You can enter all the case.
+You can enter any case.
 
 ```
 $ caseninja fooBarToBaz
