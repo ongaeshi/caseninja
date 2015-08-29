@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'caseninja'
+
+hash = Caseninja.exec(ARGV[0])
+puts hash.values
+
