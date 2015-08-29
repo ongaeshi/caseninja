@@ -4,8 +4,6 @@ module Caseninja
   module_function
 
   def exec(text, options = {})
-    "Caseninja converts input text to chain case"
-
     {
       chain: "caseninja-converts-input-text-to-chain-case",
       snake: "caseninja_converts_input_text_to_chain_case",
