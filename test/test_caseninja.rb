@@ -18,4 +18,19 @@ class TestCaseninja < MiniTest::Test
       Caseninja.exec("Caseninja converts input text to chain case")
     )
   end
+
+  def test_hello_world
+    assert_equal(
+      {
+        chain: "hello-world",
+        snake: "hello_world",
+        camel: "helloWorld",
+        pascal: "HelloWorld",
+        upper_chain: "HELLO-WORLD",
+        upper_snake: "HELLO_WORLD",
+      },
+      Caseninja.exec("hello world")
+    )
+  end
+  
 end
