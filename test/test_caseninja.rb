@@ -12,8 +12,8 @@ class TestCaseninja < MiniTest::Test
         snake: "hello_world",
         camel: "helloWorld",
         pascal: "HelloWorld",
-        upper_chain: "HELLO-WORLD",
-        upper_snake: "HELLO_WORLD",
+        upchain: "HELLO-WORLD",
+        upsnake: "HELLO_WORLD",
       },
       Caseninja.exec("hello world")
     )
@@ -24,8 +24,8 @@ class TestCaseninja < MiniTest::Test
     #     snake: "caseninja_converts_input_text_to_chain_case",
     #     camel: "caseninjaConvertsInputTextToChainCase",
     #     pascal: "CaseninjaConvertsInputTextToChainCase",
-    #     upper_chain: "CASENINJA-CONVERTS-INPUT-TEXT-TO-CHAIN-CASE",
-    #     upper_snake: "CASENINJA_CONVERTS_INPUT_TEXT_TO_CHAIN_CASE",
+    #     upchain: "CASENINJA-CONVERTS-INPUT-TEXT-TO-CHAIN-CASE",
+    #     upsnake: "CASENINJA_CONVERTS_INPUT_TEXT_TO_CHAIN_CASE",
     #   },
     #   Caseninja.exec("Caseninja converts input text to chain case")
     # )

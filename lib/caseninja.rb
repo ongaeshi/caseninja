@@ -9,8 +9,8 @@ module Caseninja
       snake: to_snake(text),
       camel: to_camel(text),
       pascal: to_pascal(text),
-      upper_chain: to_upper_chain(text),
-      upper_snake: to_upper_snake(text),
+      upchain: to_upchain(text),
+      upsnake: to_upsnake(text),
     }
   end
 
@@ -30,11 +30,11 @@ module Caseninja
     text.split.map { |e| e.capitalize }.join
   end
 
-  def to_upper_chain(text)
+  def to_upchain(text)
     to_chain(text).upcase
   end
   
-  def to_upper_snake(text)
+  def to_upsnake(text)
     to_snake(text).upcase
   end
   
