@@ -25,12 +25,12 @@ Convert the entered text to the chain, snake, camel, pascal, uppercase chain and
 
 ```
 $ caseninja "hello world"
-hello-world    # chain
-hello_world    # snake
-helloWorld     # camel
-HelloWorld     # pascal
-HELLO-WORLD    # upchain
-HELLO_WORLD    # upsnake
+hello-world                                  # chain
+hello_world                                  # snake
+helloWorld                                   # camel
+HelloWorld                                   # pascal
+HELLO-WORLD                                  # upchain
+HELLO_WORLD                                  # upsnake
 ```
 
 You can enter all the case.
@@ -38,19 +38,13 @@ You can enter all the case.
 ```
 $ caseninja fooBarToBaz
 foo-bar-to-baz
-foo_bar_to_baz
-fooBarToBaz
-FooBarToBaz
-FOO-BAR-TO-BAZ
-FOO_BAR_TO_BAZ
+.
+.
 
 $ caseninja foo-bar-to-baz
 foo-bar-to-baz
-foo_bar_to_baz
-fooBarToBaz
-FooBarToBaz
-FOO-BAR-TO-BAZ
-FOO_BAR_TO_BAZ
+.
+.
 ```
 
 Convert to snake case.
