@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Caseninja::VERSION
   spec.authors       = ["ongaeshi"]
   spec.email         = ["ongaeshi0621@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Convert input text to chain case, snake case, camel case and pascal case.}
+  spec.description   = %q{Caseninja converts input text to chain case, snake case, camel case and pascal case. Ninja will freely convert any text to any case.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
