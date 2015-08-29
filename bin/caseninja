@@ -1,7 +1,40 @@
 #!/usr/bin/env ruby
 
 require 'caseninja'
+require 'optparse'
 
-hash = Caseninja.exec(ARGV[0])
-puts hash.values
+Version = Caseninja::VERSION
+
+opts = {}
+
+ARGV.options do |o| 
+  o.banner = "Usage: caseninja [options] args"
+
+  o.on("--chain", "Convert to chain case") { opts[:chain] = true }
+  o.on("--snake", "Convert to snake case") { opts[:snake] = true }
+  o.on("--camel", "Convert to camel case") { opts[:camel] = true }
+  o.on("--pascal", "Convert to pascal case") { opts[:pascal] = true }
+  o.on("--upchain", "Convert to upper chain case") { opts[:upchain] = true }
+  o.on("--upsnake", "Convert to upper snake case") { opts[:upsnake] = true }
+
+  o.parse!
+end
+
+if ARGV.count == 0
+  puts ARGV.options.help
+else
+  ARGV.each do |text| 
+    if opts.empty?
+      puts Caseninja.exec(text).values
+    else
+      puts Caseninja.to_chain(text) if opts[:chain]
+      puts Caseninja.to_snake(text) if opts[:snake]
+      puts Caseninja.to_pascal(text) if opts[:pascal]
+      puts Caseninja.to_camel(text) if opts[:camel]
+      puts Caseninja.to_upchain(text) if opts[:upchain]
+      puts Caseninja.to_upsnake(text) if opts[:upsnake]
+    end
+  end
+end
+
 
